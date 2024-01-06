@@ -26,7 +26,7 @@ body {
                             "article article article article"
                             "footer footer footer footer ";
       
-       grid-template-rows:180px 65px 600px auto 150px;
+       grid-template-rows:130px 5px 600px auto 150px;
        /*grid-template-areas: 15% 7% auto 50% 15%; */
        grid-template-columns: 1fr 1fr 1fr 1fr;
        grid-row-gap: 20px;
@@ -39,12 +39,12 @@ body {
        display: flex;
        flex-direction: column; 
        justify-content: center;
-       align-items: center;
+       align-items: flex-start;
        /*height: 100%;*/
        text-transform: uppercase;
        position: fixed;
        width: 100%;
-       background-color: rgba(255, 255, 255, 1); /* Puedes ajustar el color de fondo */
+       /*background-color: rgba(255, 255, 255, 1); /* Puedes ajustar el color de fondo */
        z-index: 1000; /* Asegura que esté por encima de otros elementos */
    }
 
@@ -57,7 +57,7 @@ body {
    
        align-items: flex-end;
        padding-top: 1%;
-       margin-left: 0%; /* Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
+       /*margin-left: 0%;  Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
    }
 
 
@@ -68,14 +68,14 @@ body {
 /** Barra de navegacion estilos  --------------  */
 
 .nav{
- grid-area: nav;
- background: black;
+ grid-area: header;
+ /*background: black; */
  display: flex;
- justify-content: space-between;
+ justify-content: /*space-between*/ end;
  position: fixed;
- width: 90%;
- top: 153px; /* Ajusta según la altura de tu header */
-  
+ width: 60%;
+ top: 34px; /* Ajusta según la altura de tu header */
+ margin-left: 30%;
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
  
  
@@ -105,17 +105,17 @@ body {
 
 .nav-enlace{
    display: inline-block; 
-   background: rgba(0, 0, 0, 0.4);
+   background: rgba(192, 8, 8, 0.4);
    color: rgb(255, 255, 255);
    font-weight: bold;
    text-decoration: none;
    border-radius: 9px;
    text-transform: uppercase;
-   width: max-content;
+   width: unset;
    line-height: 45px;
    
    padding: 10px 3%;
-   margin: 3px 0% 0 0% ;
+   margin: 3px 2% 0 0% ;
   
    
 
@@ -132,8 +132,8 @@ body {
  
 .article{
  grid-area: article;
- background-color: rgba(15, 15, 15, 0.781);
- border-radius: 30px;
+ background-color: rgb(14 91 60 / 78%);
+ border-radius: 100px;
  text-align: center;
  padding: 0% 5%;
  margin: 0 5%; 
@@ -165,7 +165,7 @@ body {
    justify-content:center;
    align-items: center;
    width: auto;
-   max-height: 70%;
+   max-height: 85%;
    /* margin:10px  auto; */
 
    /* prueba */
@@ -226,9 +226,7 @@ body {
    
 
 
-body{
-   background-color: #fffbfb;
-}
+
 
 
 /* #################### Punto de corte 932px  ##############################################################################*/
