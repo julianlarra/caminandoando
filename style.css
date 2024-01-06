@@ -21,11 +21,12 @@ body {
        margin: 0 auto;
        grid-template-areas: "header header header header"
                             "nav nav nav nav"
-                            "article article article article"
+                           
                             "borde slider slider aside"
+                            "article article article article"
                             "footer footer footer footer ";
       
-       grid-template-rows:190px 70px auto 600px 150px;
+       grid-template-rows:180px 65px 600px auto 150px;
        /*grid-template-areas: 15% 7% auto 50% 15%; */
        grid-template-columns: 1fr 1fr 1fr 1fr;
        grid-row-gap: 20px;
@@ -55,8 +56,8 @@ body {
        justify-content: flex-start; 
    
        align-items: flex-end;
-       padding-top: 2%;
-       margin-left: 3%; /* Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
+       padding-top: 1%;
+       margin-left: 0%; /* Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
    }
 
 
@@ -73,7 +74,7 @@ body {
  justify-content: space-between;
  position: fixed;
  width: 90%;
- top: 170px; /* Ajusta según la altura de tu header */
+ top: 153px; /* Ajusta según la altura de tu header */
   
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
  
@@ -239,18 +240,19 @@ body{
       
      grid-template-areas: "header header header header"
                            "nav nav nav nav"
-                           "article article article article"
                            "borde slider slider aside"
+                           "article article article article"
+                           
                            "footer footer footer footer ";
 
-             grid-template-rows:150px 70px auto 600px 100px;
+             grid-template-rows:150px 60px  600px auto 100px;
              grid-template-columns: 1fr 1fr 1fr 1fr;
              grid-row-gap: 20px;
      
    }
 
    .nav {
-     background: white;
+     background: none;
      position: sticky;
      flex-direction: column;
      
@@ -305,7 +307,7 @@ body{
    min-width: 155px;
  } */
 
- 
+ /*
  .slider-item{
    display: flex; 
    flex-wrap: wrap;
@@ -319,7 +321,20 @@ body{
    
    border-radius: 4px;
    box-shadow: 0px 0px 25px 5px rgba(168,168,168,1);
-}
+  }
+  */
+  .slider{
+    height: fit-content;
+   }
+   
+    .slider-item{
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 150%;
+      max-height: 80%;
+      
+      margin:100px  auto;  
 }
 
 
