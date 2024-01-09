@@ -90,7 +90,7 @@ body {
 
 .nav-logo{
  display: inline-block; 
- background: rgba(0, 0, 0, 0.4);
+ /*background: rgba(4, 230, 60, 0.4);*/
  color: rgb(255, 255, 255);
  font-weight: bold;
  text-decoration: none;
@@ -126,7 +126,7 @@ body {
  .nav-enlace:hover,
  .nav-logo:focus{
    transition: background 0.3s ease;
-   background:rgb(226, 226, 224);
+   /*background:rgb(226, 226, 224);*/
    cursor: pointer;
  }
  
@@ -274,7 +274,7 @@ body {
    .nav-logo:hover,
    .nav-logo:focus{
      transition: background 0.3s ease;
-     background:rgba(85, 85, 84, 0.185);
+     /*background:rgba(85, 85, 84, 0.185);*/
      cursor: pointer;
    }
    
@@ -379,22 +379,19 @@ body {
 
   .nav {
     position: fixed;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: end;
     top: 22px;
     
   }
 
 
  .nav-enlace{
-   padding: 0px 3%;
-   
-   margin: 4px 0;
-   
-  padding: 10px 3%;
-  background: rgb(207, 196, 196);
-  margin: 10px 0;
-  min-width: 189px;
-  color: #1b1818;
+   padding: 10px 3%;
+  /* background: rgb(207, 196, 196); */
+   margin: 10px 0;
+   min-width: 27%;
+   /*color: #1b1818;*/
   
  }
  .nav-logo{
@@ -414,7 +411,7 @@ body {
 .nav-logo:hover,
 .nav-logo:focus{
   transition: background 0.3s ease;
-  background:rgba(85, 85, 84, 0.185);
+ /* background:rgba(85, 85, 84, 0.185);*/
   cursor: pointer;
 }
 
