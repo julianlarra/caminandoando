@@ -26,7 +26,7 @@ body {
                             "article article article article"
                             "footer footer footer footer ";
       
-       grid-template-rows:130px 5px 600px auto 150px;
+       grid-template-rows:120px 0% 600px auto 150px;
        /*grid-template-areas: 15% 7% auto 50% 15%; */
        grid-template-columns: 1fr 1fr 1fr 1fr;
        grid-row-gap: 20px;
@@ -58,7 +58,8 @@ body {
        align-items: flex-end;
        padding-top: 1%;
        /*margin-left: 0%;  Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
-   }
+         
+      }
 
 
 
@@ -132,7 +133,7 @@ body {
  
 .article{
  grid-area: article;
- background-color: rgb(14 91 60 / 78%);
+ background-color: rgba(28, 116, 80, 0.68);
  border-radius: 100px;
  text-align: center;
  padding: 0% 5%;
@@ -149,7 +150,7 @@ body {
 /* Determina el area que ocupa el slider */
 .slider{
    grid-area: slider;
-   max-width: 100%;
+   max-width: 90%;
    height: auto;
 
    display: flex; 
@@ -164,7 +165,7 @@ body {
    flex-wrap: wrap;
    justify-content:center;
    align-items: center;
-   width: auto;
+   max-width: 220%;;
    max-height: 85%;
    /* margin:10px  auto; */
 
@@ -232,7 +233,7 @@ body {
 /* #################### Punto de corte 932px  ##############################################################################*/
 @media (max-width :932px) {
 
-   .contenedor{
+  .contenedor{
 
      
       
@@ -243,7 +244,7 @@ body {
                            
                            "footer footer footer footer ";
 
-             grid-template-rows:150px 60px  600px auto 100px;
+             grid-template-rows:120px 2px  600px auto 100px;
              grid-template-columns: 1fr 1fr 1fr 1fr;
              grid-row-gap: 20px;
      
@@ -251,18 +252,12 @@ body {
 
    .nav {
      background: none;
-     position: sticky;
+    /* position: sticky;
      flex-direction: column;
-     
+     */
    }
   
-   .nav-enlace{
-     padding: 10px 3%;
-     background: rgb(207, 196, 196);
-     margin: 10px 0;
-     min-width: 189px;
-     color: #1b1818;
-   }
+  
 
    
    .nav-logo i {
@@ -270,11 +265,11 @@ body {
      
    }
    
-   .nav-logo{
+   /*.nav-logo{
      
      padding: 0 10%;
      display:inline-block;    
-   }
+   }*/
  
    .nav-logo:hover,
    .nav-logo:focus{
@@ -283,15 +278,40 @@ body {
      cursor: pointer;
    }
    
-   .desaparece{
+   /*.desaparece{
      display: none;
-   }
+   }*/
 
  }
 
    /* punto de corte 768px  ############################################################################*/
 
    @media (max-width :768px) { 
+    .contenedor{
+
+     
+      
+      grid-template-areas: "header header header header"
+                            "nav nav nav nav"
+                            "borde slider slider aside"
+                            "article article article article"
+                            
+                            "footer footer footer footer ";
+ 
+              grid-template-rows:110px 0px  auto auto 100px;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              grid-row-gap: 20px;
+      
+    }
+
+    .titular {
+      font-size: 0.8rem; /* Ajusta el tamaño del titular según tus necesidades */
+      padding-top: 0.5%; /* Ajusta el espaciado superior según tus necesidades */
+    }
+
+    .nav{
+      top:52px;
+    }
 
  /* .nav-logo{
    padding: 0 8%;
@@ -322,14 +342,14 @@ body {
   }
   */
   .slider{
-    height: fit-content;
+    height: max-content;
    }
    
     .slider-item{
       display: flex; 
       flex-wrap: wrap;
       justify-content: center;
-      width: 150%;
+      width: 160%;
       max-height: 80%;
       
       margin:100px  auto;  
@@ -340,13 +360,45 @@ body {
 @media   (max-width :576px)  {
 
 
+  .contenedor{
+
+     
+      
+      grid-template-areas: "header header header header"
+                            "nav nav nav nav"
+                            "borde slider slider aside"
+                            "article article article article"
+                            
+                            "footer footer footer footer ";
+ 
+              grid-template-rows:110px 0px  auto auto 100px;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              grid-row-gap: 20px;
+      
+    }
+
+  .nav {
+    position: fixed;
+    flex-direction: row;
+    top: 22px;
+    
+  }
+
+
  .nav-enlace{
    padding: 0px 3%;
    
    margin: 4px 0;
+   
+  padding: 10px 3%;
+  background: rgb(207, 196, 196);
+  margin: 10px 0;
+  min-width: 189px;
+  color: #1b1818;
+  
  }
  .nav-logo{
-   padding: 0 6%;
+   padding: 20px 30px;
    display: inline;
  }
 
@@ -357,6 +409,18 @@ body {
 .nav-logo span{
  display: none;
 } 
+
+
+.nav-logo:hover,
+.nav-logo:focus{
+  transition: background 0.3s ease;
+  background:rgba(85, 85, 84, 0.185);
+  cursor: pointer;
+}
+
+.desaparece{
+  display: none;
+}
 
 .slider{
  height: fit-content;
