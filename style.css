@@ -24,9 +24,10 @@ body {
                            
                             "borde slider slider aside"
                             "article article article article"
+                            "cont cont cont cont"
                             "footer footer footer footer ";
       
-       grid-template-rows:120px 0% 600px auto 150px;
+       grid-template-rows:120px 0% 600px auto auto 150px;
        /*grid-template-areas: 15% 7% auto 50% 15%; */
        grid-template-columns: 1fr 1fr 1fr 1fr;
        grid-row-gap: 20px;
@@ -141,6 +142,17 @@ body {
  color: #fff;
  
 } 
+
+.cont{
+  grid-area: cont;
+  /*background-color: rgba(28, 116, 80, 0.68);*/
+  /*border-radius: 100px; */
+  text-align: center;
+  padding: 0% 5%;
+  margin: 0 5%; 
+  color: #050505;
+  
+ } 
  
  
 .borde{
