@@ -3,7 +3,7 @@
 body {
    color: #fafafa;
    font-family: 'Roboto', sans-serif;
-   margin: 0;
+   margin: 0 0;
    padding: 0;
    overflow-x: hidden; /* Evita que aparezca la barra de desplazamiento horizontal */
 }
@@ -16,7 +16,7 @@ body {
 .contenedor{
    
        display: grid;
-       width: 90%;
+       width: 100%;
        height: auto;
        margin: 0 auto;
        grid-template-areas: "header header header header"
@@ -49,6 +49,14 @@ body {
        z-index: 1000; /* Asegura que esté por encima de otros elementos */
    }
 
+
+   /* Agrega una clase para cambiar el color de fondo del header al hacer scroll */
+.header-scrolled {
+  background-color: white; /* Cambia el color de fondo según tus preferencias */
+  transition: background-color 0.3s ease; /* Agrega una transición suave */
+}
+
+
 .titular{
        color: rgb(0, 0, 0);
        text-align: left;
@@ -58,7 +66,7 @@ body {
    
        align-items: flex-end;
        padding-top: 1%;
-       /*margin-left: 0%;  Agregué este margen izquierdo para desplazar el titular hacia la izquierda */
+       margin-left: 3%;  /* Agregué este margen izquierdo para desplazar el titular hacia la izquierda */ 
          
       }
 
@@ -153,6 +161,41 @@ body {
   color: #050505;
   
  } 
+
+ /* Reglas generales para todas las provincias */
+.provincia {
+  display: none; /* Oculta todas las provincias por defecto */
+  background-color: rgba(111, 112, 112, 0.68);
+  /*border-radius: 100px; */
+  text-align: center;
+  padding: 0% 5%;
+  margin: 0 5%; 
+  color: #000000;
+}
+
+.provincia img {
+  max-width: 50%; /* La imagen no superará el ancho del contenedor padre */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: 10px auto; /* Añade espacio alrededor de la imagen y la centra */
+}
+
+
+
+
+/* Reglas particulares para Mendoza */
+#mendoza.provincia {
+  display: block; /* Muestra Mendoza cuando se cumpla la regla específica */
+}
+
+/* Reglas particulares para Córdoba */
+#cordoba.provincia {
+  display: block; /* Muestra Córdoba cuando se cumpla la regla específica */
+}
+
+/* Puedes agregar reglas particulares para otras provincias siguiendo el mismo patrón */
+
+
  
  
 .borde{
