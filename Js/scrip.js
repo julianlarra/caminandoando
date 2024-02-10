@@ -28,7 +28,7 @@ function accion(){
 
 
 
-    function toggleProvincia(provinciaId) {
+function toggleProvincia(provinciaId) {
       // Obtiene el elemento de la provincia clicada
       var provinciaEspecifica = document.getElementById(provinciaId);
       if (provinciaEspecifica) {
